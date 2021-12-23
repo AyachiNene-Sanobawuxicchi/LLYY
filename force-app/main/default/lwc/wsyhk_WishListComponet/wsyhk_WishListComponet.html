@@ -1,0 +1,13 @@
+<template>
+        <ul class="slds-m-around_medium">
+            <template for:each={AllWishList.data} for:item="wish">
+                <li key={wish.Id}>
+                    {wish.WSYHK_Wish__c}, {wish.CreatedBy.Name}, {wish.CreatedDate}, {wish.WSYHK_WantToSay__c}
+                </li>              
+            </template>
+        </ul>
+        <lightning-input label="WSYHK_Wish：" ></lightning-input>
+        <lightning-input label="WSYHK_WantToSay：" ></lightning-input>
+        <lightning-button variant="brand" label="新規" title="InsertWish" onclick={WSYHK_InsertWish} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Test" title="Test" onclick={Test} class="slds-m-left_x-small"></lightning-button>
+</template>
