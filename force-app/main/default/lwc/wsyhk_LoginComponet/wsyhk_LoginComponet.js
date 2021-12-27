@@ -3,8 +3,8 @@ import loginCheck from '@salesforce/apex/wsyhk_Login.loginCheck';
 
 export default class Wsyhk_LoginComponet extends LightningElement {
     loginFlag = false;
-    userName;
-    password;
+    userName = '';
+    password = '';
 
     userNameInput(e){
         this.userName = e.target.value;
